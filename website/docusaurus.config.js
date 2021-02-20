@@ -1,7 +1,7 @@
 module.exports = {
   title: 'My Site',
   tagline: 'The tagline of my site',
-  url: 'https://oresama-lab.github.io',
+  url: 'http://oresama-lab-docs.s3-website-ap-northeast-1.amazonaws.com',
   baseUrl: '/docusaurus/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
