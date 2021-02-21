@@ -1,7 +1,4 @@
 name: "Docusaurus S3 Sync"
-description: "Builds and syncs Docusaurus builded fils to Amazon S3 bucket"
-author: Masayoshi Tohna
-
 on:
   # Trigger the workflow on push,
   # but only for the main branch
