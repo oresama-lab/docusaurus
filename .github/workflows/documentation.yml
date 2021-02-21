@@ -1,12 +1,23 @@
-name: CI
-on: [push]
+name: "Docusaurus S3 Sync"
+description: "Builds and syncs Docusaurus builded fils to Amazon S3 bucket"
+author: Masayoshi Tohna
 
+on:
+  # Trigger the workflow on push,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: turnerlabs/s3-docusaurus-sync-action@master
+      - uses: docker
+        image: Dockerfile
         env:
           AWS_DEFAULT_REGION: "ap-northeast-1"
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
